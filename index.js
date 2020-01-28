@@ -172,9 +172,12 @@ console.log(processContains("foo", ['foo', 'bar'], (bool) => bool ? 'nice!' : 's
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+function processDuplicateFree(list, callback) {
+  var deduped = list.filter( (el, i, arr) => arr.indexOf(el) === i);
+  return callback (deduped);
 }
+console.log("### Challenge `processDuplicateFree`");
+console.log(processDuplicateFree([1,1,1,2], (arr) => arr));
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
