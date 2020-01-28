@@ -329,12 +329,18 @@ console.log(tallyUpDonations([{ id: 1, first_name: "Charmain", last_name: "Seile
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
+  let count = 0; //const count = 0;
+  return function () { //function counter() {
+    return ++count;  //++count
   }
   // BROKEN CODE ENDS
 }
+
+console.log("### Challenge `counterMaker`");
+const newCounter = counterMaker();
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
 
 /**
  * ### Challenge `counterMakerWithLimit`
