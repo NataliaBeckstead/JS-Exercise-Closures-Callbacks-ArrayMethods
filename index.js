@@ -329,7 +329,7 @@ console.log(tallyUpDonations([{ id: 1, first_name: "Charmain", last_name: "Seile
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  let count = 0; //const count = 0;
+  let count = -1; //const count = 0;
   return function () { //function counter() {
     return ++count;  //++count
   }
@@ -363,7 +363,7 @@ console.log(newCounter());
  * etc
 */
 function counterMakerWithLimit(max) {
-  let count = 0; 
+  let count = -1; 
   return function () { 
     if (count >= max) {
       return count = 0;
