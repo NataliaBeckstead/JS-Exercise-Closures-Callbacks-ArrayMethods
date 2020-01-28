@@ -92,9 +92,15 @@ console.log(processLastItem(['foo', 'bar'], (str) => str + str));
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+function processSum(numberList, callback) {
+  let num = 0;
+  for(let i = 0; i < numberList.length; i++) {
+    num = num + numberList[i];
+  }
+  return callback (num);
 }
+console.log("### Challenge `processSum`");
+console.log(processSum([10, 20, 30], (num) => num + " is a big number!"));
 
 /**
  * ### Challenge `processProduct`
