@@ -362,9 +362,28 @@ console.log(newCounter());
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(max) {
+  let count = 0; 
+  return function () { 
+    if (count >= max) {
+      return count = 0;
+    } else {
+      return ++count;
+    }
+  }
 }
+
+console.log("### Challenge `counterMakerWithLimit`");
+const newLimitCounter = counterMakerWithLimit(3);
+console.log(newLimitCounter());
+console.log(newLimitCounter());
+console.log(newLimitCounter());
+console.log(newLimitCounter());
+console.log(newLimitCounter());
+console.log(newLimitCounter());
+console.log(newLimitCounter());
+
+
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
