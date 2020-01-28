@@ -120,9 +120,12 @@ console.log(processSum([10, 20, 30], (num) => num + " is a big number!"));
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(num1, num2, callback) {
+  let num = num1 * num2;
+  return callback (num);
 }
+console.log("### Challenge `processProduct`");
+console.log(processProduct(2, 7, (num) => num + " is a big number!"));
 
 /**
  * ### Challenge `processContains`
@@ -144,9 +147,11 @@ function processProduct(/* CODE HERE */) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
+function processContains(item, list, callback) {
+  return callback (list.includes(item));
 }
+console.log("### Challenge `processContains`");
+console.log(processContains("foo", ['foo', 'bar'], (bool) => bool ? 'nice!' : 'sad'));
 
 /**
  * ### Challenge `processDuplicateFree`
